@@ -18,7 +18,9 @@ function fetchData() {
 
     if (!username) {
         resultDiv.innerHTML = `<p class="error">لا يوجد اسم مستخدم في sessionStorage.</p>`;
-        window.location.href = 'index.html'; // إعادة التوجيه إلى صفحة التسجيل
+        setTimeout(() => {
+            window.location.href = 'index.html'; // إعادة التوجيه إلى صفحة التسجيل
+        }, 20);
         return;
     }
 
@@ -76,7 +78,7 @@ function fetchData() {
 
                 // إنشاء عنوان للمادة
                 const subjectHeader = document.createElement('h3');
-                subjectHeader.textContent = `${subject} :مادة `;
+                subjectHeader.textContent = `${subject} :المادة `;
                 subjectContainer.appendChild(subjectHeader);
 
                 // إنشاء جدول للدرجات
