@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>انشاء حساب</title>
+    <link rel="stylesheet" href="css/styles_sign_up.css">
+    <!-- إضافة Google Fonts لتحسين المظهر -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>انشاء حساب</h2>
+        <form id="signUpForm">
+            <div class="form-group">
+                <label for="id">المعرف (ID):</label>
+                <input type="text" id="id" name="id" required placeholder="أدخل معرفك">
+            </div>
+
+            <div class="form-group">
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" required placeholder="أدخل اسم المستخدم">
+            </div>
+
+            <div class="form-group">
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required placeholder="أدخل كلمة المرور">
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        
+        <p id="message"></p>
+        <a href="index.html"><button>For Sign In</button></a>
+
+    </div>
+    <script src="js/sign_up.js"></script>
+</body>
+</html>
