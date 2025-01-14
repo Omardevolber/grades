@@ -16,13 +16,18 @@ const usernameSpan = document.getElementById('username');
 function fetchData() {
     const username = sessionStorage.getItem('userId'); // الحصول على اسم المستخدم من sessionStorage
 
-    if (!username) {
-        resultDiv.innerHTML = `<p class="error">لا يوجد اسم مستخدم في sessionStorage.</p>`;
-        setTimeout(() => {
-            window.location.href = 'index.html'; // إعادة التوجيه إلى صفحة التسجيل
-        }, 20);
-        return;
+    function checkUsername() {
+        const username = sessionStorage.getItem('userId'); // الحصول على اسم المستخدم من sessionStorage
+    
+        if (!username) {
+            // إذا لم يكن هناك اسم مستخدم، إعادة التوجيه إلى صفحة التسجيل
+            window.location.href = 'index.html';
+        }
     }
+    
+    // استدعاء الدالة كل ثانيتين
+    setInterval(checkUsername, 1000);
+    
 
     // عرض اسم المستخدم في الهيدر
     usernameSpan.textContent = username;
